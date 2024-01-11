@@ -1,1 +1,1 @@
-Currency converter which shows exchange rates betwenn two different countries of world
+Currency converter which shows exchange rates between two different countries of world
