@@ -11,7 +11,7 @@ const msg = document.querySelector(".msg");
 for (let select of dropdowns) {
   for (currCode in countryList) {
     let newOption = document.createElement("option");
-    newOption.innerText = currCode;
+    newOption.innerText = `${currCode} - ${countryList[currCode].countryName}`;
     newOption.value = currCode;
     if (select.name === "from" && currCode === "USD") {
       newOption.selected = "selected";
@@ -36,7 +36,7 @@ const updateExchangeRate = async () => {
     amtVal = 1;
     // amount.value = "1";
   }
-  // const URL = `${BASE_URL}/${fromCurr.value.toLowerCase()}/${toCurr.value.toLowerCase()}.json`;
+
 
   try {
     let fromVal = fromCurr.value;
@@ -59,17 +59,11 @@ const updateExchangeRate = async () => {
     let toCal = amtVal * rates1[toVal]
 
     msg.innerText = `${fromCal} [${fromVal}] = ${parseFloat(toCal.toFixed(2))} [${toVal}]`;
-    // msg.innerText = `${amtVal}  ${rates1[fromVal]} = ${amtVal} ${rates1[toVal]}`;
+    
   } catch (error) {
     console.log(error)
   }
-
-  // let rate = data[toCurr.value.toLowerCase()];
-
-  // let finalAmount = amtVal ;
-  // msg.innerText = `${amtVal} ${rates1[fromVal]} = ${amtVal} ${rates1[toVal]}`;
-  // msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount} ${toCurr.value}`;
-};
+}
 
 
 const updateFlag = (element) => {
@@ -89,14 +83,4 @@ window.addEventListener("load", () => {
   updateExchangeRate();
 });
 
-// let currencyFetcher = async () => {
-//   try {
-//     let data = await fetch(BASE_URl);
-//     let final = await data.json();
-//     console.log(final.rates.USD)
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
 
-// currencyFetcher();
