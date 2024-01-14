@@ -10,6 +10,7 @@ let countryList = {
     "AUD": { countryCode: "AU", countryName: "Australian Dollar" },
     "AWG": { countryCode: "AW", countryName: "Aruban Florin" },
     "AZN": { countryCode: "AZ", countryName: "Azerbaijani Manat" },
+    "BAM": { countryCode: "BA", countryName: "Bosnia and Herzegovina Convertible Mark" },
     "BBD": { countryCode: "BB", countryName: "Barbadian Dollar" },
     "BDT": { countryCode: "BD", countryName: "Bangladeshi Taka" },
     "BGN": { countryCode: "BG", countryName: "Bulgarian Lev" },
