@@ -122,6 +122,10 @@ button {
   font-size: 25px;
 }
 
+/* .from {
+  text-align:center;
+} */
+
 @media (max-width: 1000px ) and (min-width: 500px)
 {
   form {
@@ -141,5 +145,9 @@ button {
   }
   .countries__container {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
